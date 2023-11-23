@@ -1,2 +1,2 @@
 # CompIIIproject
-Developing a car race game  Pygame.
+Developing a car race game using Pygame.
