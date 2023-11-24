@@ -93,7 +93,7 @@ def car_racing():
         screen.blit(final_level, final_level_rect)
 
         pygame.display.flip()
-        pygame.time.wait(1000)  # Display the game-over screen for  seconds
+        pygame.time.wait(600)  # Display the game-over screen for  seconds
 
     # Load the images and sounds
     background_image = pygame.image.load("gameback.png").convert()
