@@ -123,9 +123,11 @@ def car_racing():
 
         keys = pygame.key.get_pressed()
         if keys[pygame.K_LEFT]:
-            playerCar.moveLeft(5)
+           if playerCar.rect.x > 250 :
+               playerCar.moveLeft(5)
         if keys[pygame.K_RIGHT]:
-            playerCar.moveRight(5)
+           if playerCar.rect.x < 600:
+               playerCar.moveRight(5)
         if keys[pygame.K_UP]:
             speed += 0.03
             playerCar.moveBackward(speed)
