@@ -31,8 +31,6 @@ Usage:
 
 """
 
-
-
 import pygame
 import sys
 import random
@@ -120,13 +118,12 @@ def car_racing():
             ]
 
             Powerup_class = random.choice(Powerup_classes)
-            # print(Powerup_class)
+
             powerUp = Powerup_class()
 
-            # Use the new spawn_location method to set the initial position
+            #  set the initial position
             powerUp.spawn_location(road_width, road_height)
 
-            # print(f"Spawned power-up: {type(powerUp).__name__} at ({powerUp.rect.x}, {powerUp.rect.y})")
             all_powerups_list.add(powerUp)
 
     def show_game_over_screen(screen, score):
@@ -138,7 +135,7 @@ def car_racing():
 
         screen.blit(gameoverback, (0, 0))
 
-        # screen.fill(BLACK)
+
 
         text1 = cooler_font.render("Game Over", True, RED)
         text_rect = text1.get_rect(center=(SCREENWIDTH // 2, SCREENHEIGHT // 2 - 200))
@@ -152,7 +149,7 @@ def car_racing():
         lil_sass_rect = lil_sass.get_rect(center=(SCREENWIDTH // 2, SCREENHEIGHT // 2 - 100))
         screen.blit(lil_sass, lil_sass_rect)
 
-        # Display difficulty level int(level)
+        # Display difficulty level
         final_level = cooler_font.render(f"Level: {int(1)}", True, RED)
         final_level_rect = final_level.get_rect(center=(SCREENWIDTH // 2, SCREENHEIGHT // 2 + 200))
         screen.blit(final_level, final_level_rect)
@@ -189,7 +186,7 @@ def car_racing():
                         interface()
                         waiting_for_input = False
                     elif button_play_again.collidepoint(mouse_pos):
-                        car_racing()  # Assuming car_racing is the function to restart the game
+                        car_racing()
                         waiting_for_input = False
 
             pygame.time.Clock().tick(30)
@@ -278,7 +275,7 @@ def car_racing():
             # Player car is not invincible, handle collisions with traffic cars
             car_collision_list = pygame.sprite.spritecollide(playerCar, all_coming_cars, False)
             for car in car_collision_list:
-                # print("Car crash with player!")
+
                 playerCar.apply_original_image()
                 game_over_sound.play()  # Play the game_over sound
                 show_game_over_screen(screen, playerCar.score)
@@ -382,5 +379,3 @@ def car_racing():
         clock.tick(60)
 
     pygame.quit()
-
-
