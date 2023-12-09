@@ -16,11 +16,15 @@ Player 2 Controls: UP (accelerate), LEFT (move left), RIGHT (move right), DOWN (
 Avoid Collisions: Prevent collisions with traffic cars to maintain your score.
 Collect Power-Ups: Grab Power-Ups to enhance your gameplay temporarily.
 Survive Longer: Increase your level and face more challenges as you progress.
+
+
 Installation:
 
 Ensure you have Python installed.
 Install the required dependencies using pip install pygame.
 Run the game by executing the appropriate Python file (main file).
+
+All commits reflect the project's flow including author's participation/influence in the project.
 
 Author:
 Antonelli dos Santos.
